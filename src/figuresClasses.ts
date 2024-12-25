@@ -19,7 +19,7 @@ export class Triangle implements Figure {
       this.b + this.c <= this.a
     ) {
       throw new Error('not triangle');
-    } else if (a <= 0 || b <= 0 || c <= 0) {
+    } else if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
       throw new Error('not triangle');
     }
   }
@@ -39,7 +39,7 @@ export class Circle implements Figure {
     public color: Figure['color'],
     public radius: number,
   ) {
-    if (radius <= 0) {
+    if (this.radius <= 0) {
       throw new Error('radius is 0');
     }
   }
@@ -57,7 +57,7 @@ export class Rectangle implements Figure {
     public width: number,
     public length: number,
   ) {
-    if (width <= 0 || length <= 0) {
+    if (this.width <= 0 || this.length <= 0) {
       throw new Error('cannot 0');
     }
   }
